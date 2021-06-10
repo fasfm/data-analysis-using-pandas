@@ -1,0 +1,17 @@
+to add column: 
+
+ft["total"] = ft["home_score"] +ft["away_score"]
+
+to delete column:
+
+ft= ft.drop(columns=["total"])
+
+---------------------
+we can summon mulitple columns to create new column:
+
+ ft["totals"] = ft.iloc[:, 3:5].sum(axis=1)
+
+-------------------
+change name of value: 
+
+ft.loc[ft["tournament"]=="Friendly" ,"tournament" ] = "normal"
