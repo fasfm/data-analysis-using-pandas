@@ -1,0 +1,42 @@
+basic flitering data:
+
+ft= pd.read_excel( "D:\Football.xlsx")
+
+report= ft.loc[(ft['home_team']=='England') & (ft['away_team']=='Scotland')]
+
+
+other way:
+
+x =  np.logical_and(ft["home_team"]== "Scotland" , ft["away_team"] =="Wales")
+
+report2 = ft[x]
+-------------------
+to reset index : 
+
+report= report.reset_index()
+
+to remove old index:
+
+report= report.reset_index(drop= True)
+--------------------------------
+if you serch for specific word:
+
+report= ft.loc[ft['home_team'].str.contains('Northern')]
+
+not in: 
+report= ft.loc[~ft['home_team'].str.contains('Northern')]
+----------------------------
+using regular expresion:
+
+import re
+
+report= ft.loc[ft['home_team'].str.contains('northern' , flags=re.I , regex=True)]
+flags mean both captul or small litter
+
+
+
+
+
+
+
+
