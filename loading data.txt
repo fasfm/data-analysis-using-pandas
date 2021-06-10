@@ -1,0 +1,21 @@
+to load dataset using panda: 
+
+Titanic.txt:
+
+import pandas as pd 
+
+Titanic= pd.read_csv("D:\Titanic.txt")
+
+to spreat columes we use delimiter:
+
+Titanic= pd.read_csv("D:\Titanic.txt" , delimiter='\t')
+
+-----------------------------------------------
+movie.xlsx:
+
+movie = pd.read_excel( "D:\movie.xlsx")
+
+----------------------------------------------
+crime.csv:
+
+crime= pd.read_csv("D:\crime.csv")
