@@ -1,0 +1,17 @@
+to save our new data to csv:
+
+ft.to_csv("D:\modd.csv")
+
+or excel:
+
+ft.to_excel("D:\modd.xlsx")
+
+or txt:
+
+ft.to_txt("D:\modd.txt" , sep='\t')
+
+-----------------------------------
+
+to remove index column:
+
+ft.to_csv("D:\modd.csv" , index=False)
