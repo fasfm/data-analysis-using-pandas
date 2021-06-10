@@ -1,0 +1,24 @@
+to read data
+
+titanic.txt:
+
+to read fist 5 rows
+print(ti.head(5))
+
+use iloc to select intger index:
+print(ti.iloc[0:4])
+
+use loc to find specefic data:
+
+print( ti.loc[ti["sex"]== "male"] )
+
+----------------------------
+basic for loop: ( to read the whole data)
+
+for index , row in ti.iterrows():
+    print( index , row)
+ 
+we can select culome using:
+for index , row in ti.iterrows():
+    print( index , row["age"])
+
