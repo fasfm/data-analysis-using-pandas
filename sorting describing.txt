@@ -1,0 +1,15 @@
+Football.xlsx:
+
+to do some stats:
+report= ft.describe()
+
+to sort colume form A-Z or 0-9
+report= ft.sort_values("home_team")
+
+to sort colume form Z-A or 9-0
+report= ft.sort_values("home_team" , ascending= False)
+
+first one ascending and secend one unascending
+report= ft.sort_values(["home_score" , "away_score"], ascending= [1,0] )
+
+
