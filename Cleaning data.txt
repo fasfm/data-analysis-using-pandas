@@ -1,0 +1,14 @@
+cleaning datafram which have nan values and drop it:
+
+# Cleaning data
+nan_data = data[data.isna().any(axis=1)]
+
+#drop it
+data= data.dropna(how='all')
+
+# if you trying to find some string and clean it from the mean data frame:
+data = data[data["Order Date"].str[0:2] != 'Or']
+
+
+
+
