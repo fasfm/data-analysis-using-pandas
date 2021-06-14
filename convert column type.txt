@@ -1,0 +1,10 @@
+convert string to int or float:
+
+
+data['Quantity Ordered'] = (data['Quantity Ordered']).astype('float32')
+data['Price Each'] = (data['Price Each']).astype('float32')
+
+anthor way:(recomended)
+
+data['Quantity Ordered'] = pd.to_numeric(data['Quantity Ordered'])
+data['Price Each'] = pd.to_numeric(data['Price Each'])
