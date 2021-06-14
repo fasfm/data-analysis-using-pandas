@@ -1,0 +1,11 @@
+# convert order date column from string to date time:
+
+data['Order Date'] = pd.to_datetime(data['Order Date'])
+
+
+# to add column with hours only :
+data['Hour'] = data['Order Date'].dt.hour
+
+
+# to add column with minute only:
+data['min'] = data['Order Date'].dt.minute
