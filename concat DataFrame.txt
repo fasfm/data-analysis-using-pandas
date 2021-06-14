@@ -1,0 +1,10 @@
+to conact muliple dataframe: 
+
+
+files = [file for file in os.listdir('D:\path')]
+
+data = pd.DataFrame()
+
+for file in files:
+    df = pd.read_csv("D:\path" + file)
+    data= pd.concat([data , df])
