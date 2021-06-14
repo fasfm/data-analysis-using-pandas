@@ -1,0 +1,35 @@
+add new column : (Order Date: 04/19/19)
+
+
+
+data['Month'] = data["Order Date"].str[0:2]
+
+# str[0:2] means we take the first two numbers and create new column
+# you can change the type from string to int or float
+
+anther way to add new column:
+
+data['city'] = data["Purchase Address"].apply(lambda x: x.split(',')[1])
+
+
+--------------
+
+# anther way to add new column:
+
+def get_state (address):
+    return address.split(',')[1]
+
+
+data['city'] = data["Purchase Address"].apply(lambda x: get_state(x))
+
+---------------
+#advance
+
+def get_state (address):
+    return address.split(',')[1]
+
+def get_address (address):
+    return address.split(',')[2].split(' ')[1]
+
+data['city'] = data["Purchase Address"].apply(lambda x: get_state(x) + ' ' + get_address(x))
+data.head()
